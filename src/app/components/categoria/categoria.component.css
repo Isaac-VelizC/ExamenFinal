@@ -1,0 +1,45 @@
+
+  .tabbed {
+    width: 1000px;
+    margin: 120px auto;
+  }
+  
+  .tabbed > input {
+   display: none;
+  }
+  
+  .tabbed label {
+    display: block;
+    float: left;
+    padding: 15px 20px;
+    font-size: 22px;
+    transition: background-color .4s;
+  }
+  
+  .tabbed > label:hover,
+  .tabbed > input:checked + label {
+    background: black;
+    color: white;
+  }
+  
+  .tabs {
+    clear: both;
+    position: relative;
+    border-top: 2px solid black;
+  }
+  
+  .tabs > div {
+    position: absolute;
+    opacity: 0;
+    transition: opacity .5s;
+    transform: translateY(6px);
+  }
+  
+  #tab-nav-1:checked ~ .tabs > div:nth-child(1),
+  #tab-nav-2:checked ~ .tabs > div:nth-child(2),
+  #tab-nav-3:checked ~ .tabs > div:nth-child(3),
+  #tab-nav-4:checked ~ .tabs > div:nth-child(4) {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all .3s linear .1s;
+  }

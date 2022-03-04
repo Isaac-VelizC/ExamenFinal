@@ -1,0 +1,23 @@
+<div class="content">
+    <form class="d-flex">
+        <input name="search" [(ngModel)]="search" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button (click)="buscar()" class="btn btn-outline-success" type="submit">Buscar</button>
+    </form>
+    <br>
+    <button (click)="NewNoticia()" type="button" class="btn btn-outline-success">+</button>
+    <br> <br> <br>
+    <div class="row">
+        <div class="col-lg-2" *ngFor="let item of Noticias">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <img src="https://phantom-marca.unidadeditorial.es/6042ec6549741f01f50640ac9a19bdb6/crop/0x0/1198x674/resize/1320/f/jpg/assets/multimedia/imagenes/2022/02/07/16442302078686.jpg" class="card-img-top" alt="...">
+                    <h5 class="card-title">{{item.titulo}}</h5>
+                    <p class="card-text"><small class="text-muted">{{item.fecha.toDate()|date:'dd/MM/YYYY'}}</small></p>
+                    <p class="card-text">{{item.contenido}}</p>
+                    <a class="card-link">{{item.autor}}</a>
+                    <a class="card-link">{{item.categoria}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

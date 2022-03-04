@@ -1,0 +1,76 @@
+<div class="tabbed">
+    <input type="radio" name="tabs" id="tab-nav-1" checked />
+    <label for="tab-nav-1">Economica</label>
+    <input type="radio" name="tabs" id="tab-nav-2" />
+    <label for="tab-nav-2">Cultural</label>
+    <input type="radio" name="tabs" id="tab-nav-3" />
+    <label for="tab-nav-3">Social</label>
+    <input type="radio" name="tabs" id="tab-nav-4" />
+    <label for="tab-nav-4">Cientifica</label>
+    <div class="tabs">
+        <div class="row">
+            <h5 style="margin-top: 30px;" *ngIf="economica.length == 0">No hay noticas que mostrar</h5>
+            <div *ngFor="let item of economica" class="col-lg-2">
+                <div class="card-group">
+                    <div class="card">
+                        <img src="https://phantom-marca.unidadeditorial.es/6042ec6549741f01f50640ac9a19bdb6/crop/0x0/1198x674/resize/1320/f/jpg/assets/multimedia/imagenes/2022/02/07/16442302078686.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.titulo}}</h5>
+                            <p class="card-text">{{item.contenido}}</p>
+                            <p class="card-text"><small class="text-muted">{{item.fecha.toDate()|date:'dd/MM/YYYY'}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h5 style="margin-top: 30px;" *ngIf="cultural.length == 0">No hay noticas que mostrar</h5>
+            <div class="col-lg-2" *ngFor="let item of cultural">
+                <div class="card-group">
+                    <div class="card">
+                    <img src="https://phantom-marca.unidadeditorial.es/6042ec6549741f01f50640ac9a19bdb6/crop/0x0/1198x674/resize/1320/f/jpg/assets/multimedia/imagenes/2022/02/07/16442302078686.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.titulo}}</h5>
+                            <p class="card-text">{{item.contenido}}</p>
+                            <p class="card-text"><small class="text-muted">{{item.fecha.toDate()|date:'dd/MM/YYYY'}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h5 style="margin-top: 30px;" *ngIf="social.length == 0">No hay noticas que mostrar</h5>
+            <div *ngFor="let item of social" class="col-lg-2">
+                <div class="card-group">
+                    <div class="card">
+                    <img src="https://phantom-marca.unidadeditorial.es/6042ec6549741f01f50640ac9a19bdb6/crop/0x0/1198x674/resize/1320/f/jpg/assets/multimedia/imagenes/2022/02/07/16442302078686.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.titulo}}</h5>
+                            <p class="card-text">{{item.contenido}}</p>
+                            <p class="card-text"><small class="text-muted">{{item.fecha.toDate()|date:'dd/MM/YYYY'}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h5 style="margin-top: 30px;" *ngIf="cientifica.length == 0">No hay noticas que mostrar</h5>
+            <div *ngFor="let item of cientifica" class="col-lg-2">
+                <div class="card-group">
+                    <div class="card">
+                    <img src="https://phantom-marca.unidadeditorial.es/6042ec6549741f01f50640ac9a19bdb6/crop/0x0/1198x674/resize/1320/f/jpg/assets/multimedia/imagenes/2022/02/07/16442302078686.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.titulo}}</h5>
+                            <p class="card-text">{{item.contenido}}</p>
+                            <p class="card-text"><small class="text-muted">{{item.fecha.toDate()|date:'dd/MM/YYYY'}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+      <ng-template #not>
+        <p>No hay noticias</p>
+    </ng-template>
+    </div>
+</div>
